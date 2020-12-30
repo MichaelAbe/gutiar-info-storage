@@ -1,0 +1,14 @@
+<h3> Guitar List </h3>
+
+<ul>
+    <% @guitars.each do |guitar| %>
+        <li><%= guitar.brand %></li>
+        <li><%= guitar.model %></li>
+    <% end %>
+</ul>
+
+# t.string   "brand"
+#     t.string   "model"
+#     t.integer  "year"
+#     t.string   "serial_number"
+#     t.string   "color"

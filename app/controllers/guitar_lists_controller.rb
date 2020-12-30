@@ -1,11 +1,22 @@
 class GuitarListsController < ApplicationController
 
+  get '/guitar' do
+    @guitars = GuitarList.all
+    erb :'guitar_lists/index'
+  end
+
   get '/guitars/new' do
     erb :'guitar_lists/new'
   end
 
   post '/guitars' do
-    erb :'guitar_lists/collection'
+    guitar = GuitarList.new(params[:guitar])
+    #binding.pry
+    if guitar.save
+      redirect '/guitar'
+    else
+      redirect 'guitar/new'
+    end
   end
  
  
