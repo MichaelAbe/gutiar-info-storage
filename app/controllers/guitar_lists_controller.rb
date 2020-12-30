@@ -11,11 +11,11 @@ class GuitarListsController < ApplicationController
 
   post '/guitars' do
     guitar = GuitarList.new(params[:guitar])
-    #binding.pry
     if guitar.save
+      #binding.pry
       redirect '/guitar'
     else
-      redirect 'guitar/new'
+      redirect 'guitars/new'
     end
   end
  

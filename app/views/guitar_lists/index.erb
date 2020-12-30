@@ -2,13 +2,7 @@
 
 <ul>
     <% @guitars.each do |guitar| %>
-        <li><%= guitar.brand %></li>
-        <li><%= guitar.model %></li>
+        <li><a href='/guitars/<%= guitar.id %>'><%= guitar.year.to_s + " " + guitar.brand + " " + guitar.model + " " + guitar.id.to_s %></a></li>
     <% end %>
 </ul>
 
-# t.string   "brand"
-#     t.string   "model"
-#     t.integer  "year"
-#     t.string   "serial_number"
-#     t.string   "color"
