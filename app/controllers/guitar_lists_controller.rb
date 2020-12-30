@@ -3,6 +3,10 @@ class GuitarListsController < ApplicationController
   get '/guitars/new' do
     erb :'guitar_lists/new'
   end
+
+  post '/guitars' do
+    erb :'guitar_lists/collection'
+  end
  
  
   # GET: /guitar_lists
