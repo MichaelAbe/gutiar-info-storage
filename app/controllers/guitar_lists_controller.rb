@@ -2,7 +2,7 @@ class GuitarListsController < ApplicationController
 
   get '/guitar_lists' do
     @guitars = GuitarList.all
-    binding.pry
+    # binding.pry
     erb :'guitar_lists/index'
   end
 
